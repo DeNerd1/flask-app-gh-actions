@@ -18,9 +18,9 @@ jobs:
 
       - name: Build the Docker image
         id: build
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/flask-app-gh-actions
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest
 
       - name: Push the Docker image
         id: push
-        run: docker push ${{ secrets.DOCKER_USER }}/flask-app-gh-actions
+        run: docker push ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest
 
