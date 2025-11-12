@@ -23,5 +23,5 @@ jobs:
         run: docker build -t denerd1/flask-app-gh-actions:latest .
 
       - name: Push the Docker image
-        run: docker push  denerd1/flask-app-gh-actions:latest
+        run: docker push  krons/flask-app-gh-actions:latest
 
