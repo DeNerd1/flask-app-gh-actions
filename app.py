@@ -4,7 +4,7 @@ from flask import make_response
 app = Flask(__name__)
 @app.route('/')
 def index():
-  return "Hello World!11"
+  return "Hello World!"
 
 @app.route('/<page>')
 def default(page):
