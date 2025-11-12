@@ -8,7 +8,7 @@ def index():
 
 @app.route('/<page>')
 def default(page):
-  response = make_response('The page %s does not exist.' %page, 404)
+  response = make_response('This page %s does not exist.' %page, 404)
   return response
 
 
