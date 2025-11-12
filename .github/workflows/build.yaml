@@ -18,8 +18,11 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Debug Docker tag
+        run: echo "Using tag: ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest"
+        
       - name: Build the Docker image
-        run: docker build -t ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest .
+        run: docker build -t denerd1/flask-app-gh-actions:latest .
 
       - name: Push the Docker image
         run: docker push ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest
