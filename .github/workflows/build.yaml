@@ -19,8 +19,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest
+        run: docker build . --file Dockerfile --tag /DeNerd1/flask-app-gh-actions:latest
 
       - name: Push the Docker image
-        run: docker push ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest
+        run: docker push /DeNerd1/flask-app-gh-actions:latest
 
