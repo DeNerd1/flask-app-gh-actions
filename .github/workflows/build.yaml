@@ -18,5 +18,4 @@ jobs:
     - name: Push the Docker image
 
       id: push
-      run: docker push ${{ secrets.DOCKER_USER  }}/flask-app
-gh-actions
+      run: docker push ${{ secrets.DOCKER_USER  }}/flask-app-gh-actions
