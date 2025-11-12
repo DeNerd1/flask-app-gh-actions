@@ -5,7 +5,6 @@ on:
     branches: [ "**" ]
   pull_request:
     branches: [ "**" ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,8 +18,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/flask-app
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest
 
       - name: Push the Docker image
-        run: docker push ${{ secrets.DOCKER_USER }}/flask-app
-
+        run: docker push ${{ secrets.DOCKER_USER }}/flask-app-gh-actions:latest
